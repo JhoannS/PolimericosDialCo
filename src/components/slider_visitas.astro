@@ -1,0 +1,233 @@
+<h2>¡Mira nuestro puntos internacionales de aprendizaje!</h2>
+<div class="contenedor-slider2">
+  <div class="wrapper2">
+    <i id="left2" class="fa-solid fa-angle-left"></i>
+    <ul class="carousel2">
+      <li class="card2">
+        <div class="img2">
+          <img
+            src="img/Recursos polimericos/s1.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+      <li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s2.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+      <li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s3.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+      <li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s4.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+      <li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s5.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+      <li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s6.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+      <li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s7.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li><li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s8.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li><li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s9.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li><li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s10.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li><li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s11.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li><li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s12.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li><li class="card2">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/s13.jpg"
+            alt="img"
+            draggable="false"
+          />
+        </div>
+      </li>
+    </ul>
+    <i id="right2" class="fa-solid fa-angle-right"></i>
+  </div>
+</div>
+<style>
+  h2 {
+    text-align: center;
+    margin: 30px 30px 0 30px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .contenedor-slider2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .wrapper2 {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper2 i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper2 i:active {
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper2 i:first-child {
+    left: -22px;
+  }
+  .wrapper2 i:last-child {
+    right: -22px;
+  }
+  .wrapper2 .carousel2 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel2::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel2.no-transition2 {
+    scroll-behavior: auto;
+  }
+  .carousel2.dragging2 {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel2.dragging2 .card2 {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel2 :where(.card2, .img2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel2 .card2 {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: white;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carousel2 .card2 .img2 {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+  .card2 .img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .wrapper2 .carousel2 {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+    .contenedor-slider2 {
+      padding: 20px 40px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper2 .carousel2 {
+      grid-auto-columns: 100%;
+    }
+  }
+</style>
+
+<script src="./js/carrousel.js" is:inline></script>
+
+<script src="./js/carrousel.js" is:inline></script>
