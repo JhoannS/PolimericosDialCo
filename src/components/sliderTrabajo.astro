@@ -1,0 +1,121 @@
+<h2>¡Conoce mas de nuestro trabajo!</h2>
+<div class="body">
+  <div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <div class="carousel">
+      <img src="img/Recursos polimericos/1.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/2.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/3.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/4.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/5.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/6.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/7.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/8.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/9.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/10.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/11.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/12.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/13.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/14.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/15.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/16.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/17.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/18.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/19.jpg" alt="img" draggable="false" />
+      <img src="img/Recursos polimericos/20.jpg" alt="img" draggable="false" />
+      
+    </div>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+</div>
+
+<style>
+  h2{
+    text-align: center;
+    margin: 30px 30px 0 30px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .body {
+    padding: 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .wrapper {
+    display: flex;
+    max-width: 1200px;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 44px;
+    width: 44px;
+    color: var(--gold);
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: var(--caoba);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+  }
+  .wrapper i:hover {
+    background: #f2f2f2;
+  }
+  .wrapper i:first-child {
+    left: -22px;
+    display: none;
+  }
+  .wrapper i:last-child {
+    right: -22px;
+  }
+  .wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    display: flex;
+  }
+  .carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging img {
+    pointer-events: none;
+  }
+  .carousel img {
+    height: 340px;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .carousel img:hover{
+    scale: 1.1;
+    transition: 1s;
+  }
+  .carousel img:first-child {
+    margin-left: 0px;
+  }
+  @media screen and (max-width: 900px) {
+    .carousel img {
+      width: calc(100% / 2);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .carousel img {
+      width: 100%;
+    }
+  }
+</style>
+
+<script src="./js/carrousel.js" is:inline></script>
