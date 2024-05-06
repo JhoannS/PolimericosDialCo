@@ -1,68 +1,308 @@
+<h2>¡Conoce mas de nuestro trabajo!</h2>
+<div class="contenedor-slider">
+  <div class="wrapper">
+  
+    <ul class="carousel">
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/1.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/2.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/3.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/4.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/5.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/6.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+      <li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/7.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/8.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/9.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/10.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/11.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/12.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/13.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/14.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/15.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/16.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/17.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/18.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/19.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li><li class="card">
+        <div class="img">
+          <img
+            src="img/Recursos polimericos/20.webp"
+            alt="img"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+<style>
+  h2 {
+  text-align: center;
+  margin: 30px 30px 0 30px;
+  font-size: 35px;
+  font-weight: 500;
+}
 
- <section class="companies">
+.contenedor-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  overflow: hidden; /* Añadido para ocultar el desbordamiento de las imágenes */
+}
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Añadido para ocultar el desbordamiento de las imágenes */
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  border-radius: 8px;
+  scrollbar-width: none;
+  scroll-behavior: smooth; /* Desplazamiento suave */
+  animation: desplazar 80s linear infinite; /* Animación de desplazamiento */
+  width: calc(100% * 4); /* Ajuste para mostrar tres imágenes por vista */
+}
+
+.wrapper .carousel:hover {
+  animation-play-state: paused; /* Pausar la animación cuando se pasa el ratón por encima */
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto; /* Detener el desplazamiento suave durante el arrastre */
+  animation: none; /* Detener la animación */
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  width: 100%; /* Ancho de cada tarjeta */
+  height: 342px;
+  list-style: none;
+  background: white;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.carousel .card .img {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Animación de desplazamiento */
+@keyframes desplazar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contenedor-slider {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+    width: calc(100% * 1); /* Ajuste para mostrar una imagen por vista en pantallas pequeñas */
+  }
+}
+
+</style>
+
+<script src="./js/carrouselV.js" is:inline></script>
+
+
+<!-- <section class="companies">
   <h2 class="subtitle">Ellos ya <span class="change-color">confiaron</span> en nosotros </h2>
   <article class="slider">
     <div class="slider-track">
      
+
       <div class="slide">
-        <img src="img/Recursos polimericos/1.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/2.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/3.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/4.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/5.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/6.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/7.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/8.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/9.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/10.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/11.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/12.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/13.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/14.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/15.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/16.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/17.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/18.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/19.webp">
-      </div>
-      <div class="slide">
-        <img src="img/Recursos polimericos/20.webp" >
+        <img src="./assets/logo6.webp" alt="Logo empresa contratante 6">
       </div>
     </div>
   </article>
@@ -71,27 +311,27 @@
 
 <style>
   .companies{
-  margin: 3rem;
+  margin-top: 3rem;
   text-align: center;
 }
 .slider{
-  background-color: red;
-  width: 100%;
+  width: 90%;
   margin-inline: auto;
+  margin-top: 3rem;
   overflow: hidden;
-  height: 340px;
+  height: 150px;
 }
 .slider .slider-track{
   display: flex;
-  height: 100%;
-  width: calc(30% * 20);
+  height: 150px;
+  width: auto;
+  margin-top: 2rem;
   -webkit-animation: sliderImages 30s linear infinite;
   animation: sliderImages 30s linear infinite;
 }
 .slider .slider-track .slide img{
-height: 600px;
-width: 100%;
-padding: 10px;
+height: 100px;
+margin-right: 3rem;
 }
 
 /******************** ANIMACION DEL SLIDER *****************/
@@ -105,4 +345,4 @@ padding: 10px;
     transform: translateX(-100%);
 }
 }
-</style> 
+</style> -->
