@@ -6,7 +6,7 @@ const carouselChildrens2 = [...carousel2.children];
 
 let isDragging2 = false, isAutoPlay2 = true, startX2, startScrollLeft2, timeoutId2;
 
-// Get the number of cards that can fit in the carousel at once
+
 let cardPerView2 = Math.round(carousel2.offsetWidth / firstCardWidth2);
 
 // Insert copies of the last few cards to beginning of carousel for infinite scrolling
