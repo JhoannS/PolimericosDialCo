@@ -1,0 +1,75 @@
+ <ul class="ul">
+    <h2>Categorias</h2>
+    <a href="/marketCursos">
+    <li class="li ">
+      <i class="fa-solid fa-list"></i><span> Todo</span>
+    </li>
+    </a>
+
+    <a href="/marketCursos/cursosGratis">
+    <li class="li">
+      <i class="fa-solid fa-lock-open"></i><span> Gratuitos</span>
+    </li>
+    </a>
+
+    <a href="/marketCursos/cursosPaga">
+    <li class="li ">
+      <i class="fa-solid fa-hand-holding-dollar"></i><span> De paga</span>
+    </li>
+  </a>
+</ul>
+
+  <style>
+    .ul {
+    margin: 8% 30px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .ul h2 {
+    font-size: 25px;
+  }
+   .li {
+    background-color: transparent;
+    padding: 15px 20px;
+    color: var(--caoba);
+    border-radius: 15px;
+    font-weight: 600;
+    border: 2px solid var(--caoba);
+    transition: 0.5s;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .li.activo {
+    background-color: var(--caoba);
+    color: var(--white);
+    font-weight: 500;
+  }
+   .li:hover{
+    background-color: var(--caoba);
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .ul{
+        margin-top: 30%;
+    }
+  }
+  </style> 
+
+  <!-- <h2>hola</h2>
+
+  <style>
+    h2{
+        margin: 50% 0;
+        color: red;
+    }
+  </style> -->

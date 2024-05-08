@@ -1,25 +1,36 @@
 <div class="contenedor">
   <ul class="ul">
     <h2>Categorias</h2>
-    <li class="li activo">
-      <i class="fa-solid fa-list"></i><span> Todos</span>
+    <a href="/marketCursos">
+    <li class="li ">
+      <i class="fa-solid fa-list"></i><span> Todo</span>
     </li>
+    </a>
+
+    <a href="/marketCursos/cursosGratis">
     <li class="li">
       <i class="fa-solid fa-lock-open"></i><span> Gratuitos</span>
     </li>
-    <li class="li">
+    </a>
+
+    <a href="/marketCursos/cursosGratis">
+    <li class="li activo">
       <i class="fa-solid fa-hand-holding-dollar"></i><span> De paga</span>
     </li>
+  </a>
   </ul>
 
   <div class="subcontenedor">
-    <div class="bloque activo">TODO</div>
-    <div class="bloque">PAGA</div>
-    <div class="bloque">GRATIS</div>
+    <div class="bloque">
+      <div class="gratis">
+        <h3>¡Esta seccion estara disponible muy PRONTO!, te invitamos a <a href="/login">REGISTRARTE</a> y obtener recompensas exclusivas.</h3>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
+
   .contenedor {
     margin: 8% 30px;
     position: relative;
@@ -42,9 +53,9 @@
     justify-content: flex-start;
     align-items: center;
   }
-.ul h2{
-    font-size: 25px
-}
+  .ul h2 {
+    font-size: 25px;
+  }
   .contenedor .li {
     background-color: transparent;
     padding: 15px 20px;
@@ -64,33 +75,41 @@
     color: var(--white);
     font-weight: 500;
   }
-
+  .contenedor .li:hover{
+    background-color: var(--caoba);
+    color: var(--white);
+    font-weight: 500;
+  }
   .contenedor .subcontenedor {
-    height: 100vh;
     position: relative;
-    background-color: red;
     margin: 10px 0px;
-
   }
 
   .contenedor .bloque {
-    padding: 1em;
-    position: absolute;
-    color: var(--negro);
-    transition: all 0.4s ease;
-    border-radius: 0.5em;
-    opacity: 0;
-    transform: translateY(50%);
-    transition: all 0.5s ease;
-  }
-
-  .contenedor .bloque.activo {
     opacity: 1;
     transform: translateY(0%);
+    background-color: var(--white);
+    width: 100%;
+    padding: 30px;
+    box-shadow:
+      rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
+
+.gratis{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  text-align: center;
+}
+.gratis a{
+  color: var(--gold);
+}
+
 </style>
 
 <script>
+
   "use strict";
 
   const li = document.querySelectorAll(".li");
