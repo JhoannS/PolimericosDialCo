@@ -34,7 +34,7 @@ const DataPokemons = async (data) => {
             const resul = await resp.json();
             console.log(resul)
             templateHtml=`
-            <div class="pokemon__img">
+            <div class="pokemon__img" id="pokemon__img">
             <img src=${resul.sprites.other.dream_world.front_default} alt=${resul.name}/>
             <p>${resul.name}</p>
             </div>

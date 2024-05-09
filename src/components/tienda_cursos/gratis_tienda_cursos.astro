@@ -1,68 +1,78 @@
-<div class="contenedor">
-  <ul class="ul">
-    <h2>Categorias</h2>
-    <a href="/marketCursos">
-    <li class="li ">
-      <i class="fa-solid fa-list"></i><span> Todo</span>
-    </li>
-    </a>
 
-    <a href="/marketCursos/cursosGratis">
-    <li class="li activo">
-      <i class="fa-solid fa-lock-open"></i><span> Gratuitos</span>
-    </li>
-    </a>
 
-    <a href="/marketCursos/cursosPaga">
-    <li class="li ">
-      <i class="fa-solid fa-hand-holding-dollar"></i><span> De paga</span>
-    </li>
-  </a>
-  </ul>
 
-  <div class="subcontenedor">
-    <div class="bloque">
-      GRATIS
-      <div class="lists__pokemons" id="lists__pokemons">
+<div class="lists__pokemons" id="lists__pokemons">
         
-      </div>
-  
-      <div class="buttons" id="buttons"></div>
-    </div>
-    </div>
-  </div>
 </div>
 
+<div class="buttons" id="buttons"></div>
+
 <style>
-  .contenedor {
-    margin: 8% 30px;
-    position: relative;
-    width: 95%;
-    height: 100%;
+.lists__pokemons {
+  margin-top: 8%;
+  background-color: red;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 2em;
     padding: 1em;
-    color: var(--caoba);
-    transition: all 0.4s ease;
-    border-radius: 0.5em;
+    text-align: center;
   }
+  #pokemon__img {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    margin-top: 8em;
+    color: #fff;
+    padding: 0.5em;
+  }
+  .pokemon__img img {
+    height: 200px;
+    width: 100%;
+    margin-top: -5em;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: 2em auto 2em;
+  }
+  
+ .categorias{
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .categorias h2 {
+    font-size: 25px;
+  }
+   .cajas {
+    background-color: transparent;
+    padding: 15px 20px;
+    color: var(--caoba);
+    border-radius: 15px;
+    font-weight: 600;
+    border: 2px solid var(--caoba);
+    transition: 0.5s;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .cajas .activo {
+    background-color: var(--caoba);
+    color: var(--white);
+    font-weight: 500;
+  }
+   .cajas:hover{
+    background-color: var(--caoba);
+    color: var(--white);
+    font-weight: 500;
+  } 
 
   
-
-  .contenedor .subcontenedor {
-    position: relative;
-    margin: 10px 0px;
-  }
-
-  .contenedor .bloque {
-    opacity: 1;
-    transform: translateY(0%);
-    background-color: var(--white);
-    width: 100%;
-    padding: 30px;
-    box-shadow:
-      rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  }
-
   .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -179,6 +189,12 @@
     margin: 2em auto 2em;
   }
   
+  @media only screen and (max-width: 600px) {
+    .categorias{
+      margin: 40% 0px;
+      background-color: red;
+    }
+  }
 </style>
 
 

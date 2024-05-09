@@ -1,41 +1,54 @@
- <ul class="ul">
-    <h2>Categorias</h2>
-    <a href="/marketCursos">
-    <li class="li ">
-      <i class="fa-solid fa-list"></i><span> Todo</span>
-    </li>
-    </a>
 
-    <a href="/marketCursos/cursosGratis">
-    <li class="li">
+<div class="categorias">
+  <h2>Categorias</h2>
+  <div class="categoria">
+     <a href="/marketCursos">
+  <div class="cajas">
+    <i class="fa-solid fa-list"></i><span> Todo</span>
+  </div>
+  </a>
+
+  <a href="/marketCursos/cursosGratis">
+    <div class="cajas">
       <i class="fa-solid fa-lock-open"></i><span> Gratuitos</span>
-    </li>
+    </div>
     </a>
 
     <a href="/marketCursos/cursosPaga">
-    <li class="li ">
-      <i class="fa-solid fa-hand-holding-dollar"></i><span> De paga</span>
-    </li>
-  </a>
-</ul>
+      <div class="cajas">
+        <i class="fa-solid fa-hand-holding-dollar"></i><span> De paga</span>
+      </div>
+      </a>
+  </div>
+ 
+</div>
+
+
 
   <style>
-    .ul {
-    margin: 8% 30px;
+  
+  .categorias{
+    margin-top: 10%;
+    padding: 0 30px;
     width: 100%;
-    display: flex;
+    text-align: center;
     gap: 15px;
     cursor: pointer;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+
   }
-  .ul h2 {
+  .categorias h2 {
     font-size: 25px;
   }
-   .li {
+  .categoria{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+   .cajas {
     background-color: transparent;
-    padding: 15px 20px;
+    padding: 15px 30px;
+    width: 100%;
+    margin: 10px 0;
     color: var(--caoba);
     border-radius: 15px;
     font-weight: 600;
@@ -47,29 +60,20 @@
     align-items: center;
   }
 
-   .li.activo {
+   .cajas.activo {
     background-color: var(--caoba);
     color: var(--white);
     font-weight: 500;
   }
-   .li:hover{
+   .cajas:hover{
     background-color: var(--caoba);
     color: var(--white);
     font-weight: 500;
   }
 
   @media only screen and (max-width: 600px) {
-    .ul{
+    .categorias{
         margin-top: 30%;
     }
   }
   </style> 
-
-  <!-- <h2>hola</h2>
-
-  <style>
-    h2{
-        margin: 50% 0;
-        color: red;
-    }
-  </style> -->
