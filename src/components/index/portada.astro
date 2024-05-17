@@ -1,8 +1,4 @@
----
-
----
-
-<section>
+<section id="inicio">
   <article>
     <h1><span>Amplia </span>gama de cursos para <span>emprender</span></h1>
     <p>
@@ -11,6 +7,7 @@
       el fin de ayudarte a emprender.
     </p>
     <div class="botones-art">
+      <a href="https://api.whatsapp.com/send?phone=%2B573058517530&context=ARANaxkEnQzLhYJQwqzUUrVnzGz_ND2E2lkcNPPQSc7bclRL4ns5O6hf50HWQQGwz6wGi8Fa2dS-9ZtdN_-FZ0q8zCLydwAx0pLjH_ZWEB7eM1avwYaw3n-zooYbCoRuFfqK8bwS2xd714YHoiotcMbStQ&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwZXh0bgNhZW0CMTAAAR0SkEeadJIgKA-sGqza4lcq4OaX_yiD1rtJ5D_gRLiKvc0lhoRFsY9rbaY_aem_Ae5IlTcH9Kl9HACHhNtg8iombYGY1Wg5sOkVDryMXN3fsOd05PZ4wEwiTVNYZfeHSQNGsG7dN7KWOW6EUWiU8kZf" target="_blank" aria-label="Comunicate por WhatsApp">
       <button class="cssbuttons-io">
         <span
           ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -24,9 +21,10 @@
           Información</span
         >
       </button>
+    </a>
     </div>
     <main>
-      <a href="/courses">
+      <a href="/marketCursos">
         <div class="header-main">
           <h2>Nuestro portafolio</h2>
           <div class="icono">
@@ -55,6 +53,8 @@
 </section>
 
 <style>
+
+  
   section {
     margin-top: 8%;
     display: flex;
@@ -68,7 +68,19 @@
     position: relative;
     width: 50%;
     padding: 20px 40px 20px 0;
+    opacity: 0;
+    animation: aparecerLeft 1s ease-in-out forwards; /* Aplica la animación */
   }
+  @keyframes aparecerLeft {
+    0% {
+        opacity: 0; /* Al inicio, la opacidad es 0 */
+        transform: translateX(-100%); /* Desplazamiento hacia abajo */
+    }
+    100% {
+        opacity: 1; /* Al final, la opacidad es 1 */
+        transform: translateY(0); /* Sin desplazamiento */
+    }
+}
   article h1 {
     color: var(--caoba);
     font-size: 48px;
@@ -199,8 +211,21 @@
     border-radius: 40px;
     position: relative;
     cursor: pointer;
-
+    opacity: 0;
+    transform: translateY(20px); /* Desplazamiento hacia abajo */
   }
+ 
+.mostrar {
+    opacity: 1; /* Al hacer scroll hacia arriba, muestra el contenido */
+    transform: translateY(0); /* Sin desplazamiento */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transición suave */
+}
+
+.ocultar {
+    opacity: 0; /* Al hacer scroll hacia abajo, oculta el contenido */
+    transform: translateY(20px); /* Desplazamiento hacia abajo */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transición suave */
+}
   .icono-right{
     border: 10px solid var(--white);
     position: absolute;
@@ -294,3 +319,5 @@
 }
 
 </style>
+
+<script src="../js/main.js" is:inline></script>

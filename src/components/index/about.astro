@@ -2,7 +2,7 @@
 
 ---
 
-<section>
+<section id="nosotros">
     <aside>
         <div class="icono-right">
             <ion-icon name="open-outline"></ion-icon>
@@ -15,12 +15,14 @@
         Poliméricos Dial de Colombia es una compañía colombiana con centro de operaciones en la ciudad de Bogotá, dedicada a la implementación de nuevos sistemas para construcción, manejo de polímeros y tecnologías de decoración avanzada automotriz, con profesionales especializados en cada una de las áreas para llevar los conocimientos a las principales ciudades en el mundo.
       </p>
       <div class="botones-art">
+        <a href="/marketCursos" target="_blank" aria-label="Ver cursos">
         <button class="cssbuttons-io">
           <span
             ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
             Adquirir servicios</span
           >
         </button>
+        </a>
       </div>
     </article>
   </section>
@@ -39,6 +41,18 @@
     width: 50%;
     padding: 0px 20px 20px 40px;
   }
+
+.mostrar {
+    opacity: 1; /* Al hacer scroll hacia arriba, muestra el contenido */
+    transform: translateY(0); /* Sin desplazamiento */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transición suave */
+}
+
+.ocultar {
+    opacity: 0; /* Al hacer scroll hacia abajo, oculta el contenido */
+    transform: translateY(20px); /* Desplazamiento hacia abajo */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Transición suave */
+}
   article h1 {
     color: var(--white);
     font-size: 48px;
