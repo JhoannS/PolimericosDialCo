@@ -33,6 +33,8 @@ if (principal) {
         crearImg.setAttribute('src', fotoTrabajo[i][0]);
         crearSlide.appendChild(crearImg); // Añade la imagen al div del slide
         crearImg.setAttribute('class', 'imagen-creada');
+        crearImg.setAttribute('alt', 'img representativa');
+
 
         principal.appendChild(crearSlide);
     }

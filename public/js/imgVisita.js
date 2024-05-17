@@ -22,10 +22,13 @@ if (principal2) {
         let crearImg2 = document.createElement('img');
 
         crearSlide2.setAttribute('class', 'slide');
+
         // Agrega la imagen al slide
         crearImg2.setAttribute('src', fotoVisitas[i][0]);
         crearSlide2.appendChild(crearImg2); // Añade la imagen al div del slide
         crearImg2.setAttribute('class', 'imagen-creada');
+        crearImg2.setAttribute('alt', 'img representativa');
+
         
         principal2.appendChild(crearSlide2);
     }
