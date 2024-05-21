@@ -1,0 +1,83 @@
+{
+	"version": 3,
+	"routes": [
+		{
+			"src": "^/_astro/(.*)$",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"continue": true
+		},
+		{
+			"handle": "filesystem"
+		},
+		{
+			"src": "^\\/_image$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/login\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/cursosGratis\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/cursosPaga\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play1\\/playList001\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play2\\/playList002\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play3\\/playList003\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play4\\/playList004\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play5\\/playList005\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play6\\/playList006\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play7\\/playList007\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play8\\/playList008\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/play9\\/playList009\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/marketCursos\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/roles\\/admin\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/roles\\/usurios\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
+		}
+	]
+}
