@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/index/header.astro';
 import Section from "../components/index/portada.astro"
@@ -12,6 +13,7 @@ import Derechos from '../components/index/derechos.astro';
 ---
 
 <Layout title="Polimericos Dial de CO">
+    <ViewTransitions />
     <Header />
     <Section />
     <SliderTrabajo />
