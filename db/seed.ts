@@ -14,7 +14,7 @@ export default async function(){
      name: "Jhoann Zamudio",
      email: "Sebastianzamudio2004@gmail.com",
      password: "123456789",
- 	created: new Date(), // Establecer el campo created con la fecha actual
+ 	created: new Date(),
  	rol_id: 1
  	}
    ])

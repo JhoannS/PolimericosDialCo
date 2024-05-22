@@ -1,24 +1,39 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro";
 
 import { db, User, Rol } from "astro:db";
 
-const usuarios = await db.select().from(User)
-const rol = await db.select().from(Rol)
+const usuarios = await db.select().from(User);
+const rol = await db.select().from(Rol);
 ---
 
 <Layout title="Admin">
     <h1>Usuarios:</h1>
-    <ul>
-        {
-            usuarios.map((usuarios)=> <li>{usuarios.name}</li><li>{usuarios.created}</li><li>{usuarios.rol_id}</li>)
-        }
-    </ul>
+  {
+    usuarios.length > 0 ? (
+      <ul>
+        {usuarios.map((usuario) => (
+          <li>
+            <p>Nombre: {usuario.name}</p>
+            <p>Creado: {usuario.created}</p>
+            <p>Rol ID: {usuario.rol_id}</p>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p>Oh, oh. <br>Aun no se ha registrado nadie!</p>
+    )
+  }
 
-    <h1>Roles:</h1>
-    <ul>
-        {
-            rol.map((rol)=> <li>{rol.rolName}</li><li>{rol.rolId}</li>)
-        }
-
-</Layout>
+  <h1>Roles:</h1>
+  <ul>
+    {
+      rol.map((rol) => (
+        <>
+          <li>{rol.rolName}</li>
+          <li>{rol.rolId}</li>
+        </>
+      ))
+    }
+  </ul></Layout
+>
