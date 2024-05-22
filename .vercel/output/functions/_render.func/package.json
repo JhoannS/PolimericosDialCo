@@ -1,6 +1,7 @@
 {
-	"type": "module",
-	"dependencies": {
-		"cookie": "^0.6.0"
+	"scripts": {
+	  "build": "astro build",
+	  "vercel-build": "npm install && npm run build"
 	}
-}
+  }
+  
